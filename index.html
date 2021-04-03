@@ -7,27 +7,12 @@
 
   <link rel="stylesheet" href="assets/main.css">
   
+  <script src="https://raw.githack.com/DonDejvo/helloworld/main/utils/master.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
 
-  <script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyDdpTAhnL9_lk89JUhFd-ZxWtqqAzXZv4k",
-    authDomain: "webler-group.firebaseapp.com",
-    projectId: "webler-group",
-    storageBucket: "webler-group.appspot.com",
-    messagingSenderId: "491646630413",
-    appId: "1:491646630413:web:bf15dc4cafdefcc997f344",
-    measurementId: "G-SH8872ENZ8"
-  };
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  </script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
-  <script>
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
 
   <title>Group Website</title>
 
@@ -49,9 +34,32 @@
     <div class="list-item">Example #4</div>
   </div>
 
+  <div>
+    <h2>Sign with Google</h2>
+    <div>
+      <button onclick="handleSignIn()">Sign in</button>
+      <button onclick="handleLogout()">Logout</button>
+    </div>
+  </div>
+
   <p>Hello, group!</p>
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iure vero maxime quidem ex incidunt dolor accusamus adipisci doloremque quas ea error esse eum ipsum consequatur, tempora ad, fugiat veniam!</p>
 
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDdpTAhnL9_lk89JUhFd-ZxWtqqAzXZv4k",
+      authDomain: "webler-group.firebaseapp.com",
+      projectId: "webler-group",
+      storageBucket: "webler-group.appspot.com",
+      messagingSenderId: "491646630413",
+      appId: "1:491646630413:web:bf15dc4cafdefcc997f344",
+      measurementId: "G-SH8872ENZ8"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  
+    </script>
+  <script src="scripts/login.js"></script>
 </body>
 </html>
