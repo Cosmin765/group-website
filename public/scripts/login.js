@@ -3,7 +3,11 @@ var provider = new firebase.auth.GoogleAuthProvider();
 function handleSignIn() {
     firebase.auth().signInWithPopup(provider)
     .then(result => {
-        console.log(result.user);
+        hide(id("not-logged"));
+        show(id("logged"));
+        id("user-email").innerHTML = "Logged as " + result.user.email;
+        console.log("Signed successfully");
+
     })
     .catch(error => {
         console.log(error);
@@ -13,6 +17,8 @@ function handleSignIn() {
 function handleLogout() {
     firebase.auth().signOut()
     .then(() => {
+        hide(id("logged"));
+        show(id("not-logged"));
         console.log("Logout successfully");
     })
     .catch(error => {

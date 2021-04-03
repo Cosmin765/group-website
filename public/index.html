@@ -37,8 +37,11 @@
 
   <div>
     <h2>Sign with Google</h2>
-    <div>
+    <div id="not-logged">
       <button onclick="handleSignIn()">Sign in</button>
+    </div>
+    <div id="logged">
+      <span id="user-email"></span>
       <button onclick="handleLogout()">Logout</button>
     </div>
   </div>
@@ -55,16 +58,19 @@
 
   <script>
     var firebaseConfig = {
-      apiKey: "AIzaSyDdpTAhnL9_lk89JUhFd-ZxWtqqAzXZv4k",
-      authDomain: "webler-group.firebaseapp.com",
-      projectId: "webler-group",
-      storageBucket: "webler-group.appspot.com",
-      messagingSenderId: "491646630413",
-      appId: "1:491646630413:web:bf15dc4cafdefcc997f344",
-      measurementId: "G-SH8872ENZ8"
-    };
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    apiKey: "AIzaSyDdpTAhnL9_lk89JUhFd-ZxWtqqAzXZv4k",
+    authDomain: "webler-group.firebaseapp.com",
+    databaseURL: "https://webler-group-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "webler-group",
+    storageBucket: "webler-group.appspot.com",
+    messagingSenderId: "491646630413",
+    appId: "1:491646630413:web:bf15dc4cafdefcc997f344",
+    measurementId: "G-SH8872ENZ8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
   
     </script>
   <script src="scripts/login.js"></script>
