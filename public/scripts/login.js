@@ -1,12 +1,19 @@
 var provider = new firebase.auth.GoogleAuthProvider();
-hide(id("logged"));
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if(user) {
+        hide(id("not-logged"));
+        show(id("logged"));
+        id("user-email").innerHTML = "Logged as " + user.email;
+    } else {
+        hide(id("logged"));
+        show(id("not-logged"));
+    }
+});
 
 function handleSignIn() {
     firebase.auth().signInWithPopup(provider)
     .then(result => {
-        hide(id("not-logged"));
-        show(id("logged"));
-        id("user-email").innerHTML = "Logged as " + result.user.email;
         console.log("Signed successfully");
 
     })
@@ -18,8 +25,6 @@ function handleSignIn() {
 function handleLogout() {
     firebase.auth().signOut()
     .then(() => {
-        hide(id("logged"));
-        show(id("not-logged"));
         console.log("Logout successfully");
     })
     .catch(error => {
