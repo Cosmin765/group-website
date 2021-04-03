@@ -1,4 +1,5 @@
 var provider = new firebase.auth.GoogleAuthProvider();
+hide(id("logged"));
 
 function handleSignIn() {
     firebase.auth().signInWithPopup(provider)
