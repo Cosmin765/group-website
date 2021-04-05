@@ -1,11 +1,25 @@
 body {
   margin: 0;
-  background-color: aquamarine;
+  padding:0;
+  background-color: #efefef;
   height: 200vh;
 }
 
+.Wrapper {
+  width:90vw;
+  margin:0 auto;
+}
+.Logo {
+  width:30%;
+}
+.Logo img{
+  width:300px;
+  height:180px;
+
+}
 .app-bar {
-  background-color: blue;
+
+  background-color: #333399;
   width: 100%;
   position: sticky;
   top: 0;
@@ -29,7 +43,7 @@ body {
   height: 100vh;
   width: 25%;
   left: 0;
-  background-color: deepskyblue;
+  background-color: #333399;
   transform: translateX(-98%);
   transition: transform 0.3s;
   position: fixed;
@@ -41,10 +55,10 @@ body {
 }
 
 .menu .list-item {
-  background-color: dodgerblue;
+  background-color: white;
   padding: 50px;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin:5px 15px 10px 15px;
 }
 
 .menu .list-item:hover {
@@ -52,8 +66,17 @@ body {
   background-color: lightskyblue;
 }
 
+h2 {font-family:serif, sans-serif;
+  margin-left:15px;
+  text-decoration:underline;
+  font-size: 30px;
+  padding: 20px;
+}
 p {
   /* color: #fff; */
+  font-family:serif, sans-serif;
+  margin-left:15px;
+  text-decoration:underline;
   font-size: 30px;
   padding: 20px;
 }
