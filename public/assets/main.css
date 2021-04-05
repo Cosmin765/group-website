@@ -80,3 +80,22 @@ p {
   font-size: 30px;
   padding: 20px;
 }
+#not-logged button {
+  width:70px;
+  margin:7px;
+  font-family:serif, sans-serif;
+  font-size:16px;
+  border-radius:17px;
+  margin-bottom:3px;
+}
+ button {
+  width:70px;
+  margin:7px;
+  font-family:serif, sans-serif;
+  font-size:16px;
+  border-radius:17px;
+}
+textarea {
+  border-radius:10px;
+  border: 1px solid ;
+}
