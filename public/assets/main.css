@@ -6,19 +6,19 @@ body {
 }
 
 .Wrapper {
-  width:90vw;
+  width:80vw;
   margin:0 auto;
 }
 .Logo {
-  width:30%;
+  width:100%;
 }
 .Logo img{
-  width:300px;
-  height:180px;
-
+  width:90%;
+  height:300px;
+  margin-right:10%;
+  margin-bottom:-10%;
 }
 .app-bar {
-
   background-color: #333399;
   width: 100%;
   position: sticky;
