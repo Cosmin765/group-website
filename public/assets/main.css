@@ -14,10 +14,10 @@ body {
   width:100%;
 }
 .Logo img{
-  width:90%;
-  height:300px;
-  margin-right:10%;
-  margin-bottom:-10%;
+  width:300px;/*90%*/
+  height:180px;/*300px*/
+  /*margin-right:10%;
+  margin-bottom:-10%;*/
 }
 .app-bar {
   background-color: #333399;
